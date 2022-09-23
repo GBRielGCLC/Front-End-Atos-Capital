@@ -1,0 +1,79 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+#divIndex{
+    width: 80%;
+    margin-top: 50px;
+    height: 100vh;
+}
+#divCreate{
+    justify-content: center;
+    margin-top: 20%;
+    display: block;
+}
+
+#newRecord, #cad, #back{
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 1%;
+    margin-top: 3%;
+}
+
+#newRecord{
+    background-color: blue;
+}
+#newRecord:hover{
+    background-color: #0084ff;
+}
+
+#cad{
+    float: right;
+    background-color: green;
+}
+#cad:hover{
+    background-color: #1e9e1e;
+}
+
+#back{
+    background-color: red;
+}
+#back:hover{
+    background-color: #d12828;
+}
+
+
+.end{
+    float: right;
+}
+select{
+    width: 170px;
+}
+
+table{
+    width: 100%;
+}
+th{
+    background-color: #283434;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+th, td{
+    border-left: solid 2px white;
+    border-right: solid 2px white;
+    height: 30px;
+}
+
+tr:nth-child(even){
+    background-color: #f0ecec;
+}
+tr:nth-child(odd){
+    background-color: #fafafa;
+}
+tr:hover{
+    background-color: #d1cccc;
+}
