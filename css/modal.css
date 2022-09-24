@@ -71,6 +71,6 @@
 #backCreate,#backUpdate{
     background-color: #DC143C;
 }
-#backCreate, #backUpdate:hover{
+#backCreate:hover, #backUpdate:hover{
     background-color: #CD5C5C;
 }
