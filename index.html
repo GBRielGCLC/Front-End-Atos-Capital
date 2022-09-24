@@ -6,6 +6,7 @@
     <title> Index </title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
  
 </head>
 <body>
@@ -24,8 +25,88 @@
                 
             </tbody>
         </table>
+
+        <!-- Modal Update -->
+        <div id="modalUpdate" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div id="divCreate">
+                    <h1> EDITAR </h1>
+                    <hr></hr>
+                    <label for="" class="inputModal"> 
+                        Nome:  
+                        <input type="text" id="name">
+                    </label>
+                    <label class="inputModal"> 
+                        Email:
+                        <input type="email" id="email">
+                    </label>
+
+                    <label class="inputModal">
+                        Gênero:
+                        <select id="gender">
+                            <option value="male"> Masculino </option>
+                            <option value="female"> Feminino </option>
+                        </select>
+                    </label>
+
+                    <label for="status" class="inputModal"> 
+                        Status: 
+                        <select id="status">
+                            <option value="active"> Ativo </option>
+                            <option value="inactive"> Inativo </option>
+                        </select>
+                    </label>
+
+                </div>
+                <button id="backUpdate"> Voltar </button>
+                <button id="update"> Salvar </button>
+            </div>
+        </div>
+        
+        <!-- Modal Create -->
+        <div id="modalCreate" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div id="divCreate">
+                    <h1> NOVO REGISTRO </h1>
+                    <hr></hr>
+                    <label for="" class="inputModal"> 
+                        Nome:  
+                        <input type="text" id="nameCreate">
+                    </label>
+                    <label class="inputModal"> 
+                        Email:
+                        <input type="email" id="emailCreate">
+                    </label>
+
+                    <label class="inputModal">
+                        Gênero:
+                        <select id="genderCreate">
+                            <option value="male"> Masculino </option>
+                            <option value="female"> Feminino </option>
+                        </select>
+                    </label>
+
+                    <label class="inputModal"> 
+                        Status: 
+                        <select id="statusCreate">
+                            <option value="active"> Ativo </option>
+                            <option value="inactive"> Inativo </option>
+                        </select>
+                    </label>
+
+                </div>
+                <button id="backCreate"> Voltar </button>
+                <button id="cad"> Cadastrar </button>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
 
 <script src="js/index.js"></script>
+<script src="js/create.js"></script>
+<script src="js/update.js"></script>
+<script src="js/modal.js"></script>

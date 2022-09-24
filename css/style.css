@@ -8,13 +8,8 @@ body{
     margin-top: 50px;
     height: 100vh;
 }
-#divCreate{
-    justify-content: center;
-    margin-top: 20%;
-    display: block;
-}
 
-#newRecord, #cad, #back{
+#newRecord{
     color: white;
     border: none;
     padding: 10px;
@@ -27,29 +22,6 @@ body{
 }
 #newRecord:hover{
     background-color: #0084ff;
-}
-
-#cad{
-    float: right;
-    background-color: green;
-}
-#cad:hover{
-    background-color: #1e9e1e;
-}
-
-#back{
-    background-color: red;
-}
-#back:hover{
-    background-color: #d12828;
-}
-
-
-.end{
-    float: right;
-}
-select{
-    width: 170px;
 }
 
 table{
@@ -77,3 +49,4 @@ tr:nth-child(odd){
 tr:hover{
     background-color: #d1cccc;
 }
+

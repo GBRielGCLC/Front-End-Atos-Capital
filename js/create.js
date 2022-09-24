@@ -1,15 +1,11 @@
-document.getElementById("back").onclick = function(){//voltar para o index
-    location.href = "index.html";
-};
-
 document.getElementById("cad").onclick = function(){//pegar os valores ao clicar no botão
     var name, email, gender , status;
 
     //pegar os dados e armazenar nas variáveis
-    name = document.getElementById("name").value;
-    email = document.getElementById("email").value;
-    gender = document.getElementById("gender").value;
-    status = document.getElementById("status").value;
+    name = document.getElementById("nameCreate").value;
+    email = document.getElementById("emailCreate").value;
+    gender = document.getElementById("genderCreate").value;
+    status = document.getElementById("statusCreate").value;
     //
     
     const dataObject = {//construir o objeto que sera utilizado na request
@@ -37,8 +33,7 @@ const postData = async (dataObject) =>{
     //verificação e retorno ao usuário de alguns status da request(erro, sucesso...)
     if(response.status==201 || response.status==200){
         alert(dataObject.name+" foi cadastrado com sucesso!!");
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
+        window.location.reload();
     }
     if(response.status==422){
         alert("Falha no envio dos dados, talvez você tenha digitado algo com um formato inválido!");

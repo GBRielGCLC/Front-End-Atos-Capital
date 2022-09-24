@@ -1,7 +1,3 @@
-document.getElementById("newRecord").onclick = function(){//ir à página create ao clicar no botão
-    location.href = "create.html";
-};
-
 (async function getData(){
     try{
         //API
@@ -40,6 +36,7 @@ function createLine(data){
     //criação dos botões
     btnEdit = document.createElement('button');
     btnEdit.textContent = "Editar";
+    btnEdit.setAttribute("class","edit")
     btnEdit.style.marginRight="5px";
 
     btnDel = document.createElement('button');
@@ -70,19 +67,16 @@ function createLine(data){
     };
 
     btnEdit.onclick = function(){//chamar função update com os dados como parâmetro
-        updateData(data.id,data.name,data.email,data.gender,data.status);
+        id = data.id;
+        name = data.name;
+        email = data.email;
+        gender = data.gender;
+        status = data.status;
+        loadInputData(id,name,email,gender,status);
+        modalUpdate.style.display = "block";
     };
     
     return line;
-}
-
-function updateData(id,name,email,gender,status){//pegar os dados para ir para a página de update
-    localStorage.setItem('id', id);
-    localStorage.setItem('name', name);
-    localStorage.setItem('email', email);
-    localStorage.setItem('gender', gender);
-    localStorage.setItem('status', status);
-    location.href = "update.html";
 }
 
 async function deleteData(id,name){

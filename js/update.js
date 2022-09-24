@@ -1,8 +1,4 @@
-document.getElementById("back").onclick = function(){//voltar para o index
-    location.href = "index.html";
-};
-
-document.getElementById("cad").onclick = function(){
+document.getElementById("update").onclick = function(){
     var _update = confirm("Tem certeza que deseja alterar os dados de "+name+" (ID "+id+")");//confirma a escolha
     if(_update){
 
@@ -20,32 +16,16 @@ document.getElementById("cad").onclick = function(){
             "status": status,
         }
 
-        //para o caso do usuário atualizar a página, assim os dados antigos não serão carregados no lugar dos ja alterados
-        localStorage.setItem('name', name);
-        localStorage.setItem('email', email);
-        localStorage.setItem('gender', gender);
-        localStorage.setItem('status', status);
-        //
-
         updateData(dataObject);
     }
 };
 
-var id, name, email, gender, status;
-
-//pegar os dados do localStorage e atribuir a varíavel
-id = localStorage.getItem('id');
-name = localStorage.getItem('name');
-email = localStorage.getItem('email');
-gender = localStorage.getItem('gender');
-status = localStorage.getItem('status');
-//
-
-//colocar os dados nos devidos campos
-document.getElementById("name").value = name;
-document.getElementById("email").value = email;
-document.getElementById("gender").value = gender;
-document.getElementById("status").value = status ;
+function loadInputData(id,name,email,gender,status){
+    document.getElementById("name").value = name;
+    document.getElementById("email").value = email;
+    document.getElementById("gender").value = gender;
+    document.getElementById("status").value = status ;
+}
 //
 
 const updateData = async (dataObject) =>{
@@ -63,6 +43,7 @@ const updateData = async (dataObject) =>{
     //verificação e retorno ao usuário de alguns status da request(erro, sucesso...)
     if(response.status==200){
         alert("Os dados de "+dataObject.name+" foram alterados com sucesso!!");
+        window.location.reload();
     }
     if(response.status==422){
         alert("Falha no envio dos dados, talvez você tenha digitado algo com um formato inválido!");
